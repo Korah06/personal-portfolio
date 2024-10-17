@@ -11,15 +11,17 @@ class Navbar extends StatefulWidget {
 class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
-    return  Container(
+    return Container(
       color: themeColorSchema.secondaryContainer,
       height: 80,
-      child: const Row(
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(width: 300,),
-          SizedBox(
+          ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 200, minWidth: 0),
+          ),
+          const SizedBox(
             width: 500,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
