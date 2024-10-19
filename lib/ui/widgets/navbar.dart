@@ -18,7 +18,7 @@ class _NavbarState extends State<Navbar> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          SizedBox(width: 300,),
+          SizedBox(width: 100,),
           SizedBox(
             width: 500,
             child: Row(

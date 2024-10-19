@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: themeColorSchema,
         useMaterial3: true,
+        fontFamily: 'Cascadia Code',
       ),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),

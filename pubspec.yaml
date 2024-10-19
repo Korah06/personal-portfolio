@@ -21,3 +21,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/fonts/
+    - assets/images/mario.jpg
+
+  fonts:
+    - family: Cascadia Code
+      fonts:
+        - asset: assets/fonts/CascadiaCode.ttf
