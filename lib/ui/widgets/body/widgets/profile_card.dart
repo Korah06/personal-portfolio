@@ -8,6 +8,7 @@ class ProfileCard extends StatelessWidget {
     final cardColor = Theme.of(context).colorScheme.primaryContainer;
 
     return Card(
+      elevation: 20,
       shape: const CircleBorder(),
       color: cardColor,
       child: const Padding(
