@@ -41,10 +41,10 @@ class _NavbarState extends State<Navbar> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text('Home'),
-                Text('About'),
-                Text('Projects'),
-                Text('Contact'),
+                Text('Inicio'),
+                Text('Experiencia'),
+                Text('Proyectos'),
+                Text('Contacto'),
               ],
             ),
           )

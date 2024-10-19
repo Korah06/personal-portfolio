@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/profile_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/header_presentation.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
 
 class BodyDesktop extends StatelessWidget {
@@ -11,21 +12,21 @@ class BodyDesktop extends StatelessWidget {
     return const Column(
       children: [
         SizedBox(height: 150),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ProfileCard(),
-            Padding(
-              padding: EdgeInsets.only(top: 100),
-              child: Text('¡Hola!, soy Mario', style: TextStyle(fontSize: 40)),
-            ),
-          ],
-        ),
+        HeaderPresentation(),
         SizedBox(height: 50),
         TitleText(),
         SizedBox(height: 10),
         DescriptionText(),
-
+        SizedBox(height: 20),
+        SocialMediaIconsRow(),
+        SizedBox(height: 450),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text("Experiencia", style: TextStyle(fontSize: 28)),
+          ],
+        ),
+        SizedBox(height: 900),
       ],
     );
   }

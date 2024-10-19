@@ -11,15 +11,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: ResponsiveLayout(
-        mobile: CenteredView(child: BodyMobile()),
-        desktop: Column(
-          children: [
-            Navbar(),
-            CenteredView(child: BodyDesktop())
-          ],
-        ),
-      )
-    );
+        body: ResponsiveLayout(
+      mobile: CenteredView(child: BodyMobile()),
+      desktop: Column(
+        children: [
+          Navbar(),
+          Expanded(
+            child: SingleChildScrollView(
+              child: CenteredView(child: BodyDesktop()),
+            ),
+          ),
+        ],
+      ),
+    ));
   }
 }
