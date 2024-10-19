@@ -12,7 +12,24 @@ class _NavbarState extends State<Navbar> {
   @override
   Widget build(BuildContext context) {
     return  Container(
-      color: themeColorSchema.secondaryContainer,
+      decoration: BoxDecoration(
+        border: Border(
+          bottom: BorderSide(
+            color: themeColorSchema.primary.withOpacity(0.5),
+            width: 2,
+          ),
+        ),
+        gradient: LinearGradient(
+          colors: [
+            themeColorSchema.secondaryContainer.withOpacity(1.0),
+            themeColorSchema.secondaryContainer.withOpacity(0.75),
+            themeColorSchema.secondaryContainer.withOpacity(0.40),
+            themeColorSchema.secondaryContainer.withOpacity(0.15),
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
       height: 80,
       child: const Row(
         crossAxisAlignment: CrossAxisAlignment.center,
