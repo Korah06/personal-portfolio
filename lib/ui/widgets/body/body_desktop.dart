@@ -7,24 +7,34 @@ import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart
 import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
 
 class BodyDesktop extends StatelessWidget {
-  const BodyDesktop({super.key});
+  final GlobalKey homeKey;
+  final GlobalKey experienceKey;
+  final GlobalKey projectsKey;
+  final GlobalKey contactKey;
+
+  const BodyDesktop(
+      {super.key,
+      required this.homeKey,
+      required this.experienceKey,
+      required this.projectsKey,
+      required this.contactKey});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SizedBox(height: 150),
-        HeaderPresentation(),
-        SizedBox(height: 50),
-        TitleText(),
-        SizedBox(height: 10),
-        DescriptionText(),
-        SizedBox(height: 20),
-        SocialMediaIconsRow(),
-        SizedBox(height: 450),
-        ExperienceTitle(),
-        SizedBox(height: 20),
-        ExperienceTimeline(),
+        SizedBox(height: 150, key: homeKey),
+        const HeaderPresentation(),
+        const SizedBox(height: 50),
+        const TitleText(),
+        const SizedBox(height: 10),
+        const DescriptionText(),
+        const SizedBox(height: 20),
+        const SocialMediaIconsRow(),
+        const SizedBox(height: 450),
+        ExperienceTitle(key: experienceKey,),
+        const SizedBox(height: 20),
+        const ExperienceTimeline(),
       ],
     );
   }

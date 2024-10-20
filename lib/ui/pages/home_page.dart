@@ -6,19 +6,33 @@ import 'package:my_portfolio/ui/widgets/navbar.dart';
 import 'package:my_portfolio/ui/widgets/responsive_layout.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  final GlobalKey homeKey = GlobalKey();
+  final GlobalKey experienceKey = GlobalKey();
+  final GlobalKey projectsKey = GlobalKey();
+  final GlobalKey contactKey = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         body: ResponsiveLayout(
-      mobile: CenteredView(child: BodyMobile()),
+      mobile: const CenteredView(child: BodyMobile()),
       desktop: Column(
         children: [
-          Navbar(),
+          Navbar(
+              homeKey: homeKey,
+              experienceKey: experienceKey,
+              projectsKey: projectsKey,
+              contactKey: contactKey),
           Expanded(
             child: SingleChildScrollView(
-              child: CenteredView(child: BodyDesktop()),
+              child: CenteredView(
+                  child: BodyDesktop(
+                      homeKey: homeKey,
+                      experienceKey: experienceKey,
+                      projectsKey: projectsKey,
+                      contactKey: contactKey)),
             ),
           ),
         ],
