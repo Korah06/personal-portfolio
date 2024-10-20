@@ -25,7 +25,7 @@ class _NavbarState extends State<Navbar> {
     final GlobalKey experienceKey = widget.experienceKey;
     final GlobalKey projectsKey = widget.projectsKey;
     final GlobalKey contactKey = widget.contactKey;
-    final _isHovered = [
+    final isHovered = [
       false,
       false,
       false,
@@ -76,8 +76,8 @@ class _NavbarState extends State<Navbar> {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 MouseRegion(
-                  onEnter: (_) => setState(() => _isHovered[0] = true),
-                  onExit: (_) => setState(() => _isHovered[0] = false),
+                  onEnter: (_) => setState(() => isHovered[0] = true),
+                  onExit: (_) => setState(() => isHovered[0] = false),
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () => scrollToSection(homeKey),
