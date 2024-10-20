@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/experience_timeline.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/experience_title.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/header_presentation.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
@@ -20,13 +22,9 @@ class BodyDesktop extends StatelessWidget {
         SizedBox(height: 20),
         SocialMediaIconsRow(),
         SizedBox(height: 450),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text("Experiencia", style: TextStyle(fontSize: 28)),
-          ],
-        ),
-        SizedBox(height: 900),
+        ExperienceTitle(),
+        SizedBox(height: 20),
+        ExperienceTimeline(),
       ],
     );
   }
