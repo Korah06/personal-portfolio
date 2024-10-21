@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/data/objects/projects.dart';
+import 'package:my_portfolio/data/model/project.dart';
+import 'package:my_portfolio/data/model/skill.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/experience_timeline.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/sections_title.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/header_presentation.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/skill_card.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
 
@@ -22,6 +24,7 @@ class BodyDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Column(
       children: [
         SizedBox(height: 150, key: homeKey),
@@ -49,14 +52,14 @@ class BodyDesktop extends StatelessWidget {
         const SizedBox(height: 20),
         GridView.builder(
           shrinkWrap: true,
-          itemCount: projects.length, // Number of items in the grid
+          itemCount: Project.projects.length, // Number of items in the grid
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Number of columns
+            crossAxisCount: 1, // Number of columns
             crossAxisSpacing: 10.0,
             mainAxisSpacing: 10.0,
           ),
           itemBuilder: (BuildContext context, int index) {
-            final project = projects[index];
+            final project = Project.projects[index];
             return Card(
               color: Theme.of(context).colorScheme.primaryContainer,
               elevation: 20,
@@ -65,7 +68,24 @@ class BodyDesktop extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(project.title, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                    Text(project.title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+                    const SizedBox(height: 10),
+                    Card(
+                      elevation: 10,
+                      clipBehavior: Clip.antiAlias,
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(project.status == ProjectStatus.finished ? "En Producción" : "En progreso"),
+                      ),
+                    ),
+                    const SizedBox(height: 10),
+                     const Row(
+                      children: [
+                        SkillCard(skill: Skill.flutter),
+                        SkillCard(skill: Skill.java),
+                        SkillCard(skill: Skill.spring),
+                      ],
+                    ),
                     const SizedBox(height: 10),
                     Text(project.description),
                   ],

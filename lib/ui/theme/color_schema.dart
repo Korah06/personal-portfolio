@@ -7,7 +7,7 @@ const ColorScheme themeColorSchema = ColorScheme(
   surface: Color(0xFF244855), // Used for background color
   error: Color(0xFFE76F51), // Used for error elements
   onPrimary: Color(0xFFD7F1FF), // Used for text/icons on primary elements
-  onSecondary: Colors.white, // Used for text/icons on secondary elements
+  onSecondary: Color(0xFF001219), // Used for text/icons on secondary elements
   onSurface: Colors.white, // Used for text/icons on background
   onError: Colors.white, // Used for text/icons on error elements
   brightness: Brightness.light, // Defines the overall brightness of the theme

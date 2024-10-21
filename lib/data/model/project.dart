@@ -2,7 +2,7 @@ import 'package:equatable/equatable.dart';
 
 enum ProjectStatus { workingOn, finished }
 
-class Project extends Equatable{
+class Project extends Equatable {
   final String title;
   final String description;
   final String image;
@@ -14,6 +14,14 @@ class Project extends Equatable{
     required this.image,
     required this.status,
   });
+
+  static get projects =>
+      [
+        const Project(title: "Baccus TPV",
+            description: "Tpv de restauración hecho en flutter con Bloc como state management principal. \n\nEsta app contiene multiples funcionalidades desde una gestión de mesas compleja hasta la gestión de cuentas con sistema de facturación de clientes integrada. Además de estar conectada a un backend con Java y MySql y multiples integraciones tanto software como hardware.",
+            image: "a",
+            status: ProjectStatus.finished),
+      ];
 
   Project copyWith({
     String? title,
@@ -30,6 +38,5 @@ class Project extends Equatable{
   }
 
   @override
-  // TODO: implement props
-  List<Object?> get props => [title];
+  List<Object?> get props => [title, description, image, status];
 }
