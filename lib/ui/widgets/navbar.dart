@@ -47,16 +47,16 @@ class _NavbarState extends State<Navbar> {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: themeColorSchema.primary.withOpacity(0.5),
+            color: themeColorSchema.primary.withOpacity(0.0),
             width: 2,
           ),
         ),
         gradient: LinearGradient(
           colors: [
             themeColorSchema.secondaryContainer.withOpacity(1.0),
-            themeColorSchema.secondaryContainer.withOpacity(0.75),
-            themeColorSchema.secondaryContainer.withOpacity(0.40),
-            themeColorSchema.secondaryContainer.withOpacity(0.15),
+            themeColorSchema.secondaryContainer.withOpacity(0.55),
+            themeColorSchema.secondaryContainer.withOpacity(0.20),
+            themeColorSchema.secondaryContainer.withOpacity(0.02),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,

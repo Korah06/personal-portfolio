@@ -84,6 +84,7 @@ class BodyDesktop extends StatelessWidget {
                         SkillCard(skill: Skill.flutter),
                         SkillCard(skill: Skill.java),
                         SkillCard(skill: Skill.spring),
+                        SkillCard(skill: Skill.mysql),
                       ],
                     ),
                     const SizedBox(height: 10),

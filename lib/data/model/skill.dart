@@ -1,10 +1,11 @@
+import 'package:dev_icons/dev_icons.dart';
 import 'package:flutter/material.dart';
-import 'package:icons_plus/icons_plus.dart';
 
 enum Skill {
-  java('Java', BoxIcons.bxl_java),
-  spring('Spring', BoxIcons.bxl_spring_boot),
-  flutter('Flutter', BoxIcons.bxl_flutter);
+  java('Java', DevIcons.javaPlain),
+  spring('Spring', DevIcons.springPlain),
+  mysql('mySQL', DevIcons.mysqlPlain),
+  flutter('Flutter', DevIcons.flutterPlain);
 
   final String name;
   final IconData icon;
