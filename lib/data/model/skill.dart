@@ -5,6 +5,8 @@ enum Skill {
   java('Java', DevIcons.javaPlain),
   spring('Spring', DevIcons.springPlain),
   mysql('mySQL', DevIcons.mysqlPlain),
+  kotlin('Kotlin', DevIcons.kotlinPlain),
+  swift('Swift', DevIcons.swiftPlain),
   flutter('Flutter', DevIcons.flutterPlain);
 
   final String name;

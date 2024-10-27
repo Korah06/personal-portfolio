@@ -18,13 +18,20 @@ class Project extends Equatable {
     required this.skills,
   });
 
-  static get projects =>
-      [
-        const Project(title: "Baccus TPV",
-            description: "Tpv de restauración hecho en flutter con Bloc como state management principal. \n\nEsta app contiene multiples funcionalidades desde una gestión de mesas compleja hasta la gestión de cuentas con sistema de facturación de clientes integrada. Además de estar conectada a un backend con Java y MySql y multiples integraciones tanto software como hardware.",
+  static get projects => [
+        const Project(
+            title: "Baccus TPV",
+            description:
+                "Tpv de restauración hecho en flutter con Bloc como state management principal. \n\nEsta app contiene multiples funcionalidades desde una gestión de mesas compleja hasta la gestión de cuentas con sistema de facturación de clientes integrada. Además de estar conectada a un backend con Java y MySql y multiples integraciones tanto software como hardware.",
             image: "a",
             status: ProjectStatus.finished,
             skills: [Skill.flutter, Skill.java, Skill.spring, Skill.mysql]),
+        const Project(
+            title: "TrainIT",
+            description: "Aplicación para gimnasios preparada para una gestión de usuarios inscritos al mismo con sistema de horarios de los entrenamientos y estadisticas además de otras funcionalidades como creación de posts y chat",
+            image: "a",
+            status: ProjectStatus.workingOn,
+            skills: [Skill.kotlin, Skill.swift]),
       ];
 
   Project copyWith({
@@ -44,5 +51,5 @@ class Project extends Equatable {
   }
 
   @override
-  List<Object?> get props => [title, description, image, status,skills];
+  List<Object?> get props => [title, description, image, status, skills];
 }
