@@ -6,13 +6,13 @@ class HeaderPresentation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        ProfileCard(),
+        const ProfileCard(),
         Padding(
-          padding: EdgeInsets.only(top: 100),
-          child: Text('¡Hola!, soy Mario', style: TextStyle(fontSize: 40)),
+          padding: const EdgeInsets.only(top: 100),
+          child: Text('¡Hola!, soy Mario', style: TextStyle(fontSize: 40,color: Theme.of(context).colorScheme.onSurface)),
         ),
       ],
     );

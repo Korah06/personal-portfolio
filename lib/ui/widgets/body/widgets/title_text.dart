@@ -12,7 +12,7 @@ class TitleText extends StatelessWidget {
         Text.rich(
           TextSpan(
             text: 'Desarrollador ',
-            style: const TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.onSurface),
             children: [
               TextSpan(
                 text: 'Multiplataforma',

@@ -53,10 +53,11 @@ class _NavbarState extends State<Navbar> {
         ),
         gradient: LinearGradient(
           colors: [
-            themeColorSchema.secondaryContainer.withOpacity(1.0),
-            themeColorSchema.secondaryContainer.withOpacity(0.55),
-            themeColorSchema.secondaryContainer.withOpacity(0.20),
-            themeColorSchema.secondaryContainer.withOpacity(0.02),
+            themeColorSchema.onSurface.withOpacity(0.95),
+            themeColorSchema.onSurface.withOpacity(0.70),
+            themeColorSchema.onSurface.withOpacity(0.60),
+            themeColorSchema.onSurface.withOpacity(0.35),
+            themeColorSchema.onSurface.withOpacity(0.02),
           ],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
@@ -81,28 +82,49 @@ class _NavbarState extends State<Navbar> {
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () => scrollToSection(homeKey),
-                    child: const Text('Inicio'),
+                    child: Text(
+                      'Inicio',
+                      style: TextStyle(
+                          color:
+                              Theme.of(context).colorScheme.secondaryContainer,
+                          fontWeight: FontWeight.bold),
+                    ),
                   ),
                 ),
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () => scrollToSection(experienceKey),
-                    child: const Text('Experiencia'),
+                    child: Text('Experiencia',
+                        style: TextStyle(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondaryContainer,
+                            fontWeight: FontWeight.bold)),
                   ),
                 ),
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () => scrollToSection(projectsKey),
-                    child: const Text('Proyectos'),
+                    child: Text('Proyectos',
+                        style: TextStyle(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondaryContainer,
+                            fontWeight: FontWeight.bold)),
                   ),
                 ),
                 MouseRegion(
                   cursor: SystemMouseCursors.click,
                   child: GestureDetector(
                     onTap: () => scrollToSection(contactKey),
-                    child: const Text('Contacto'),
+                    child: Text('Contacto',
+                        style: TextStyle(
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondaryContainer,
+                            fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],

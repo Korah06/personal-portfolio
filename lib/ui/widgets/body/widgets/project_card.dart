@@ -4,12 +4,13 @@ import 'package:my_portfolio/ui/widgets/body/widgets/skill_card.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;
+
   const ProjectCard({super.key, required this.project});
 
   @override
   Widget build(BuildContext context) {
-
-    List<Widget> skillCards = project.skills.map((skill) => SkillCard(skill: skill)).toList();
+    List<Widget> skillCards =
+        project.skills.map((skill) => SkillCard(skill: skill)).toList();
 
     return Card(
       color: Theme.of(context).colorScheme.primaryContainer,
@@ -19,14 +20,23 @@ class ProjectCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(project.title, style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+            Text(project.title,
+                style:
+                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
             const SizedBox(height: 10),
             Card(
               elevation: 10,
               clipBehavior: Clip.antiAlias,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text(project.status == ProjectStatus.finished ? "En Producción" : "En progreso"),
+                child: Text(
+                    project.status == ProjectStatus.finished
+                        ? "En Producción"
+                        : "En progreso",
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.secondaryContainer)),
               ),
             ),
             const SizedBox(height: 10),

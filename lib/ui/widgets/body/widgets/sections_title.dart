@@ -16,7 +16,11 @@ class SectionsTitle extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Icon(icon, size: 30, color: iconColor),
         ),
-        Text(title, style: const TextStyle(fontSize: 28)),
+        Text(title,
+            style: TextStyle(
+                fontSize: 28,
+                color: Theme.of(context).colorScheme.onSurface,
+                fontWeight: FontWeight.bold)),
       ],
     );
   }
