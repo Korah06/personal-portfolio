@@ -14,12 +14,13 @@ class BodyDesktop extends StatelessWidget {
   final GlobalKey projectsKey;
   final GlobalKey contactKey;
 
-  const BodyDesktop(
-      {super.key,
-      required this.homeKey,
-      required this.experienceKey,
-      required this.projectsKey,
-      required this.contactKey});
+  const BodyDesktop({
+    super.key,
+    required this.homeKey,
+    required this.experienceKey,
+    required this.projectsKey,
+    required this.contactKey,
+  });
 
   @override
   Widget build(BuildContext context) {

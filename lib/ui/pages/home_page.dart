@@ -17,7 +17,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: ResponsiveLayout(
-      mobile: const CenteredView(child: BodyMobile()),
+      mobile: SingleChildScrollView(
+        child: BodyMobile(
+          homeKey: homeKey,
+          experienceKey: experienceKey,
+          projectsKey: projectsKey,
+          contactKey: contactKey,
+        ),
+      ),
       desktop: Column(
         children: [
           Navbar(

@@ -17,35 +17,41 @@ class ProjectCard extends StatelessWidget {
       elevation: 20,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(project.title,
-                style:
-                    const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
-            const SizedBox(height: 10),
-            Card(
-              elevation: 10,
-              clipBehavior: Clip.antiAlias,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                    project.status == ProjectStatus.finished
-                        ? "En Producción"
-                        : "En progreso",
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Theme.of(context).colorScheme.secondaryContainer)),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(project.title,
+                  style:
+                      const TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+              const SizedBox(height: 10),
+              Card(
+                elevation: 10,
+                clipBehavior: Clip.antiAlias,
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                      project.status == ProjectStatus.finished
+                          ? "En Producción"
+                          : "En progreso",
+                      style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color:
+                              Theme.of(context).colorScheme.secondaryContainer)),
+                ),
               ),
-            ),
-            const SizedBox(height: 10),
-            Row(
-              children: skillCards,
-            ),
-            const SizedBox(height: 10),
-            Text(project.description),
-          ],
+              const SizedBox(height: 10),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: skillCards,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(project.description),
+            ],
+          ),
         ),
       ),
     );
