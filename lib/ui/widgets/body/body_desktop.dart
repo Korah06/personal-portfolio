@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/contact_card.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/experience_timeline.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/projects_grid.dart';
@@ -48,6 +49,15 @@ class BodyDesktop extends StatelessWidget {
         ),
         const SizedBox(height: 20),
         const ProjectsGrid(),
+        const SizedBox(height: 450),
+        SectionsTitle(
+          icon: Icons.contact_mail_rounded,
+          title: "Contacto",
+          key: contactKey,
+        ),
+        const SizedBox(height: 20),
+        const ContactCard(),
+        const SizedBox(height: 20),
       ],
     );
   }
