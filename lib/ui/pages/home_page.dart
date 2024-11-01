@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/ui/widgets/body/body_desktop.dart';
 import 'package:my_portfolio/ui/widgets/body/body_mobile.dart';
-import 'package:my_portfolio/ui/widgets/centered_view.dart';
 import 'package:my_portfolio/ui/widgets/navbar.dart';
 import 'package:my_portfolio/ui/widgets/responsive_layout.dart';
 
@@ -34,12 +33,11 @@ class HomePage extends StatelessWidget {
               contactKey: contactKey),
           Expanded(
             child: SingleChildScrollView(
-              child: CenteredView(
-                  child: BodyDesktop(
-                      homeKey: homeKey,
-                      experienceKey: experienceKey,
-                      projectsKey: projectsKey,
-                      contactKey: contactKey)),
+              child: BodyDesktop(
+                  homeKey: homeKey,
+                  experienceKey: experienceKey,
+                  projectsKey: projectsKey,
+                  contactKey: contactKey),
             ),
           ),
         ],

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/hover_icon.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/hover_icon.dart';
 
 class CardIcon extends StatelessWidget {
   final IconData icon;

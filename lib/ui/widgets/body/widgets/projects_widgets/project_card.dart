@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/data/model/project.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/skill_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/projects_widgets/skill_card.dart';
 
 class ProjectCard extends StatelessWidget {
   final Project project;

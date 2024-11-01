@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/contact_form.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/contact_title.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/contact_widgets/contact_form.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/contact_widgets/contact_title.dart';
 import 'package:my_portfolio/ui/widgets/responsive_layout.dart';
 
 class ContactCard extends StatelessWidget {

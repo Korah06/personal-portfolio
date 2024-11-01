@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/contact_card.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/experience_timeline.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/profile_card.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/projects_grid.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/contact_widgets/contact_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/description_text.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/experience_widgets/experience_timeline.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/profile_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/projects_widgets/projects_grid.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/sections_title.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/social_media_icons_row.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/title_text.dart';
 
 class BodyMobile extends StatelessWidget {
   final GlobalKey homeKey;

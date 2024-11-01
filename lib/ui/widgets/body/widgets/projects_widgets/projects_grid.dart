@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_portfolio/data/model/project.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/project_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/projects_widgets/project_card.dart';
 import 'package:my_portfolio/ui/widgets/responsive_layout.dart';
 
 class ProjectsGrid extends StatelessWidget {

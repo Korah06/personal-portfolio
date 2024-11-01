@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/card_icon.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/card_icon.dart';
 import 'package:my_portfolio/utils/copy_to_clipboard.dart';
 import 'package:my_portfolio/utils/open_website.dart';
 

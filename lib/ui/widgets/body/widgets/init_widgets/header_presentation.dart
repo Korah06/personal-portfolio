@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/profile_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/profile_card.dart';
 
 class HeaderPresentation extends StatelessWidget {
   const HeaderPresentation({super.key});

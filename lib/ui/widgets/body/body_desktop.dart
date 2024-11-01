@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/contact_card.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/description_text.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/experience_timeline.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/projects_grid.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/animations/animated_circle.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/animations/breath_animation.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/animations/circle_circular_animation.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/animations/following_circles.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/animations/wave_animation.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/contact_widgets/contact_card.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/experience_widgets/experience_timeline.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/init_widgets/home.dart';
+import 'package:my_portfolio/ui/widgets/body/widgets/projects_widgets/projects_grid.dart';
 import 'package:my_portfolio/ui/widgets/body/widgets/sections_title.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/header_presentation.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/social_media_icons_row.dart';
-import 'package:my_portfolio/ui/widgets/body/widgets/title_text.dart';
+import 'package:my_portfolio/ui/widgets/centered_view.dart';
 
 class BodyDesktop extends StatelessWidget {
   final GlobalKey homeKey;
@@ -26,38 +29,83 @@ class BodyDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 150, key: homeKey),
-        const HeaderPresentation(),
-        const SizedBox(height: 50),
-        const TitleText(),
-        const SizedBox(height: 10),
-        const DescriptionText(),
-        const SizedBox(height: 20),
-        const SocialMediaIconsRow(),
+        SizedBox(height: 110, key: homeKey),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width * 0.5,
+                alignment: Alignment.center,
+                child: const AnimatedCircle()),
+          ],
+        ),
+        const CenteredView(child: Home()),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width * 0.4,
+                alignment: Alignment.center,
+                child: const CircularPathAnimation()),
+          ],
+        ),
         const SizedBox(height: 450),
-        SectionsTitle(
-          icon: Icons.work_outline_rounded,
-          title: "Experiencia",
-          key: experienceKey,
+        CenteredView(
+          child: SectionsTitle(
+            icon: Icons.work_outline_rounded,
+            title: "Experiencia",
+            key: experienceKey,
+          ),
         ),
         const SizedBox(height: 20),
-        const ExperienceTimeline(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                alignment: Alignment.center,
+                child: const BreathingCircle()),
+          ],
+        ),
+        const CenteredView(child: ExperienceTimeline()),
         const SizedBox(height: 450),
-        SectionsTitle(
-          icon: Icons.code_rounded,
-          title: "Proyectos",
-          key: projectsKey,
+        CenteredView(
+          child: SectionsTitle(
+            icon: Icons.code_rounded,
+            title: "Proyectos",
+            key: projectsKey,
+          ),
         ),
         const SizedBox(height: 20),
-        const ProjectsGrid(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                alignment: Alignment.center,
+                child: const MovingAndBouncingCircle()),
+          ],
+        ),
+        const CenteredView(child: ProjectsGrid()),
         const SizedBox(height: 450),
-        SectionsTitle(
-          icon: Icons.contact_mail_rounded,
-          title: "Contacto",
-          key: contactKey,
+        CenteredView(
+          child: SectionsTitle(
+            icon: Icons.contact_mail_rounded,
+            title: "Contacto",
+            key: contactKey,
+          ),
         ),
         const SizedBox(height: 20),
-        const ContactCard(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Container(
+                width: MediaQuery.of(context).size.width * 0.3,
+                alignment: Alignment.center,
+                child: const FollowingCircles()),
+          ],
+        ),
+        const CenteredView(child: ContactCard()),
         const SizedBox(height: 20),
       ],
     );
