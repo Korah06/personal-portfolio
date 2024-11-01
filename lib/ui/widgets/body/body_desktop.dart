@@ -29,7 +29,7 @@ class BodyDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 110, key: homeKey),
+        SizedBox(height: 70, key: homeKey),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -39,7 +39,6 @@ class BodyDesktop extends StatelessWidget {
                 child: const AnimatedCircle()),
           ],
         ),
-        const CenteredView(child: Home()),
         Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
@@ -49,6 +48,7 @@ class BodyDesktop extends StatelessWidget {
                 child: const CircularPathAnimation()),
           ],
         ),
+        const CenteredView(child: Home()),
         const SizedBox(height: 450),
         CenteredView(
           child: SectionsTitle(
